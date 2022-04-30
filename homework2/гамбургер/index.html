@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+    .product {
+        background-color: bisque;
+        text-align: center;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    p {
+        text-align: center;
+    }
+    input:checked{
+        background: blue;
+    }
+    .heading {
+        text-transform: uppercase;
+        opacity: 0.7;
+        color: blueviolet;
+    }
+</style>
+<body>
+    <form action="#">
+        <div class="product">
+            <span class="heading">Размер</span>
+            <br>
+            <input type="radio" name="size" id="big_burger" data-price="100" data-calories="40" checked>
+            <label>Большой (100 рублей, 40 калорий)</label>
+            <input type="radio" name="size" id="small_burger" data-price="50" data-calories="20">
+            <label for="small_burger">Малый (50 рублей, 20 калорий)</label>
+        </div>
+        <br>
+        <div class="product">
+            <span class="heading">Начинка</span>
+            <br>
+            <input type="radio" name="ingredients" id="chees" data-price="10" data-calories="20">
+            <label>Сыр (10 рублей, 20 калорий)</label>
+            <input type="radio" name="ingredients" id="salad" data-price="20" data-calories="5" checked>
+            <label>Салат (20 рублей, 5 калорий)</label>
+            <input type="radio" name="ingredients" id="potato" data-price="15" data-calories="10">
+            <label>Картофель (15 рублей, 10 калорий)</label>
+        </div>
+        <br>
+        <div class="product">
+            <span class="heading">Добавки</span>
+            <br>
+            <input type="checkbox" name="toppings" id="spice" data-price="15" data-calories="0" checked>
+            <label>Приправа (15 рублей, 0 калорий)</label>
+            <input type="checkbox" name="toppings" id="mayonnaise" data-price="20" data-calories="5">
+            <label>Майонез (20 рублей, 5 калорий)</label>
+        </div>
+        <br>
+
+        <button id="check" type="button">Собрать бургер</button>
+        <p id="result">Итоговая стоимость: <span id="price">0</span> <br>
+            Кол-во калорий: <span id="calories">0</span></p>
+    </form>
+    <script src="calc.js"></script>
+</body>
+
+</html>
