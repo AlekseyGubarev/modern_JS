@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <style>
+        .hidden {
+            display: none;   
+        }
+        .error {
+            color: red;
+        }
+        .border {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="#">
+        <label>Имя<br>
+            <input type="text" name="username">
+            <span class="hidden">Имя содержит только буквы</span></label><br>
+        <label>Телефон<br>
+            <input type="text" name="phone">
+            <span class="hidden">Телефон имеет вид +7(000)000-0000</span></label><br>
+        <label>E-mail<br>
+            <input type="email" name="email">
+            <span class="hidden">E-mail имеет вид mymail@mail.ru,
+            или my.mail@mail.ru, или my-mail@mail.ru</span></label><br>
+        <label>Текст<br>
+            <input type="textarea" name="text">
+            <span class="hidden">Заполните поле</span></label><br>
+        <label><br>
+            <input type="submit" id="button" value="Отправить"><br></label>
+        
+    </form>
+    <script src="val.js"></script>
+</body>
